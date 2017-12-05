@@ -32,6 +32,18 @@ public class GameMaster : MonoBehaviour {
         {
             SceneManager.LoadScene("Level2");
         }
+        if(level == 2)
+        {
+            SceneManager.LoadScene("Level3");
+        }
+        if (level == 3)
+        {
+            SceneManager.LoadScene("Level4");
+        }
+        if(level == 4)
+        {
+            SceneManager.LoadScene("Level5");
+        }
     }
 
     public void ReloadCurrentLevel()
@@ -44,5 +56,22 @@ public class GameMaster : MonoBehaviour {
         {
             SceneManager.LoadScene("Level2");
         }
+        if(level == 3)
+        {
+            SceneManager.LoadScene("Level3");
+        }
+        if(level == 4)
+        {
+            SceneManager.LoadScene("Level4");
+        }
+        if(level == 5)
+        {
+            SceneManager.LoadScene("Level5");
+        }
+    }
+
+    public void ShowWinScreen()
+    {
+        SceneManager.LoadScene("win");
     }
 }

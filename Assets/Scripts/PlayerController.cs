@@ -2,7 +2,7 @@
  * Name: PlayerController
  * Class: CSCI-C 490
  * Project: Final
- * Purpose: Control the player movement (Based off of the roll-a-ball game)
+ * Purpose: Control the player movement. (Based off of the roll-a-ball game)
  ***************************************************************************/
 
 
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject gm;
    
+
     // Use this for initialization
     void Start()
     {
@@ -67,9 +68,14 @@ public class PlayerController : MonoBehaviour
 
         if (collision.collider.tag == "Finish")
         {
-            if(gm.GetComponent<GameMaster>().level == 1)
+            if(gm.GetComponent<GameMaster>().level < 5)
             {
                 gm.GetComponent<GameMaster>().LoadNextLevel();
+            }
+
+            if(gm.GetComponent<GameMaster>().level == 5)
+            {
+                gm.GetComponent<GameMaster>().ShowWinScreen();
             }
         }
     }
