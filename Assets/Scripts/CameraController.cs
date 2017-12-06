@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*******************************************************************
+* Name: CameraController.cs
+* Class: CSCI-C 490
+* Project: Final
+* Purpose: Control the camera movement.
+*******************************************************************/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,10 +15,12 @@ public class CameraController : MonoBehaviour
     public GameObject PlayerRef;
     private Vector3 offset;
 
-    // Use this for initialization
+     /********************************************************************
+    * Name: Start
+    * Purpose: Initialize the scene.
+    ********************************************************************/
     void Start()
     {
-
         //Have offset equal the camera's position minus the player object's position.
         offset = transform.position - PlayerRef.transform.position;
     }

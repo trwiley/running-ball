@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*******************************************************************
+* Name: GameMaster.cs
+* Class: CSCI-C 490
+* Project: Final
+* Purpose: Control the game rules.
+*******************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,12 +17,18 @@ public class GameMaster : MonoBehaviour {
 
     public Text timeText;
 
-	// Use this for initialization
+	/********************************************************************
+    * Name: Start
+    * Purpose: Initialize the scene.
+    ********************************************************************/
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
+	/****************************************************************
+    * Name: FixedUpdate
+    * Purpose: Update at every frame.
+    **************************************************************/
 	void Update () {
         timeRemaining -= Time.deltaTime;
         timeText.text = "Time remaining: " + timeRemaining;
@@ -26,6 +38,10 @@ public class GameMaster : MonoBehaviour {
         }
 	}
 
+    /****************************************************************
+    * Name: LoadNextLevel
+    * Purpose: Load the next level.
+    **************************************************************/
     public void LoadNextLevel()
     {
         if(level == 1)
@@ -46,6 +62,10 @@ public class GameMaster : MonoBehaviour {
         }
     }
 
+    /****************************************************************
+    * Name: ReloadCurrentLevel
+    * Purpose: Reload the current level.
+    **************************************************************/
     public void ReloadCurrentLevel()
     {
         if(level == 1)
@@ -70,6 +90,10 @@ public class GameMaster : MonoBehaviour {
         }
     }
 
+    /****************************************************************
+    * Name: ShowWinScreen
+    * Purpose: Load the win screen.
+    **************************************************************/
     public void ShowWinScreen()
     {
         SceneManager.LoadScene("win");
